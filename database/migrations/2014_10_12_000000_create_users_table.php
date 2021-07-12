@@ -31,8 +31,6 @@ class CreateUsersTable extends Migration
             $table->string('webside')->nullable();
             $table->string('profile_img')->nullable();
             $table->string('type');
-            $table->string('salary')->nullable();
-            $table->date('join_date')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

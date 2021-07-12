@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\account\Blog;
+namespace App\Http\Controllers\Blog;
 
 use App\Http\Controllers\Controller;
 use App\Models\BlogTag;

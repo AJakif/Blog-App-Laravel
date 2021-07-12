@@ -5,7 +5,7 @@
 <div class="card">
     <h5 class="card-header">Edit Blog</h5>
     <div class="card-body">
-      <form method="post" action="{{route('account.update.blog',$blog->id)}}"  enctype="multipart/form-data">
+      <form method="post" action="{{route('admin.update.blog',$blog->id)}}"  enctype="multipart/form-data">
         {{csrf_field()}}
         <div class="form-group">
           <label for="inputTitle" class="col-form-label">Title <span class="text-danger">*</span></label>

@@ -5,7 +5,7 @@
 <div class="card">
     <h5 class="card-header">Edit Post Category</h5>
     <div class="card-body">
-      <form method="post" action="{{route('account.blog.update.cat',$blogCategory->id)}}">
+      <form method="post" action="{{route('admin.blog.update.cat',$blogCategory->id)}}">
         @csrf 
         @method('PATCH')
         <div class="form-group">

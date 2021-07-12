@@ -12,12 +12,6 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    public function home(){
-       
-        $blogs=Blog::where('status','active')->orderBy('id','DESC')->limit(3)->get();
-        return view('frontend.index')
-                ->with('blogs',$blogs);
-    } 
 
     
     function register(){
@@ -55,7 +49,7 @@ class UserController extends Controller
                  $save = $user->save();
 
                  if($save){
-                    return redirect('/login')->with('success','Registration Succesfull');
+                    return redirect('/')->with('success','Registration Succesfull');
 
                  }else{
                      return back()->with('fail','Something went wrong, try again later');

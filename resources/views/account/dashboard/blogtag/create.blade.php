@@ -4,7 +4,7 @@
 <div class="card">
     <h5 class="card-header">Add Blog Tag</h5>
     <div class="card-body">
-      <form method="post" action="{{route('account.blog.store.tag')}}">
+      <form method="post" action="{{route('admin.blog.store.tag')}}">
         {{csrf_field()}}
         <div class="form-group">
           <label for="inputTitle" class="col-form-label">Title</label>

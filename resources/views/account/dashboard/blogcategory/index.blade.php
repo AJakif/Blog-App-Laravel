@@ -2,27 +2,9 @@
 
 @section('maincontent')
 <div class="card shadow mb-4">
-     <div class="row">
-         <div class="col-md-12">
-         @if(session('success'))
-            <div class="alert alert-success alert-dismissable fade show">
-                <button class="close" data-dismiss="alert" aria-label="Close">×</button>
-                {{session('success')}}
-            </div>
-        @endif
-
-
-        @if(session('error'))
-            <div class="alert alert-danger alert-dismissable fade show">
-                <button class="close" data-dismiss="alert" aria-label="Close">×</button>
-                {{session('error')}}
-            </div>
-        @endif
-         </div>
-     </div>
     <div class="card-header py-3">
       <h6 class="m-0 font-weight-bold text-primary float-left">Blog Category Lists</h6>
-      <a href="{{route('account.blog.create.cat')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add Blog Category</a>
+      <a href="{{route('admin.blog.create.cat')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add Blog Category</a>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -60,8 +42,8 @@
                         @endif
                     </td>
                     <td>
-                        <a href="{{route('account.blog.edit.cat',$data->id)}}" class="btn btn-primary btn-sm float-left mr-1" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" title="edit" data-placement="bottom"><i class="fas fa-edit"></i></a>
-                    <form method="POST" action="{{route('account.blog.delete.cat',[$data->id])}}">
+                        <a href="{{route('admin.blog.edit.cat',$data->id)}}" class="btn btn-primary btn-sm float-left mr-1" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" title="edit" data-placement="bottom"><i class="fas fa-edit"></i></a>
+                    <form method="POST" action="{{route('admin.blog.delete.cat',[$data->id])}}">
                       @csrf 
                       @method('delete')
                           <button class="btn btn-danger btn-sm dltBtn" data-id="{{$data->id}}" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="fas fa-trash-alt"></i></button>

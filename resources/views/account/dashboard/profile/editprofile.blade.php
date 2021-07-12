@@ -18,7 +18,7 @@
             </div><!-- /.row -->
           </div><!-- /.container-fluid -->
         </div>
-<form action="{{ route('account.update',$LoggedUserInfo['id'] )}}" method="post" enctype="multipart/form-data">
+<form action="{{ route('admin.update',$LoggedUserInfo['id'] )}}" method="post" enctype="multipart/form-data">
 
   @csrf
   <section class="content">

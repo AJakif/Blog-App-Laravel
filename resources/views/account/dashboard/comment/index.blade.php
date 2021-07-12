@@ -75,8 +75,8 @@
                     <td>{{$value -> parent_id}}</td>
                     <td>{{$value -> user_id}}</td>
                     <td>
-                        <a href="{{ route('account.comment.edit',[$value -> id])}}" class="btn btn-primary btn-sm float-left mr-1" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" title="edit" data-placement="bottom"><i class="fas fa-edit"></i></a>
-                    <form method="POST" action="{{ route('account.comment.delete',[$value -> id])}}">
+                        <a href="{{ route('admin.comment.edit',[$value -> id])}}" class="btn btn-primary btn-sm float-left mr-1" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" title="edit" data-placement="bottom"><i class="fas fa-edit"></i></a>
+                    <form method="POST" action="{{ route('admin.comment.delete',[$value -> id])}}">
                       @csrf 
                       @method('delete')
                           <button class="btn btn-danger btn-sm dltBtn" data-id="{{$value->id}}" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="fas fa-trash-alt"></i></button>

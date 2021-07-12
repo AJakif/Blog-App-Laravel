@@ -4,7 +4,7 @@
 <div class="card">
     <h5 class="card-header">Edit Post Tag</h5>
     <div class="card-body">
-      <form method="post" action="{{route('account.blog.update.tag',$blogTag->id)}}">
+      <form method="post" action="{{route('admin.blog.update.tag',$blogTag->id)}}">
         @csrf 
         @method('PATCH')
         <div class="form-group">

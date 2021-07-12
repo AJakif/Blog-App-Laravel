@@ -59,6 +59,6 @@ class SettingsController extends Controller
         else{
             request()->session()->flash('error','Please try again');
         }
-        return redirect()->route('account.dashboard');
+        return redirect()->route('admin.dashboard');
     }
 }

@@ -5,7 +5,7 @@
  <div class="card shadow mb-4">
     <div class="card-header py-3">
       <h6 class="m-0 font-weight-bold text-primary float-left">Blog Lists</h6>
-      <a href="{{route('account.create.blog')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add Blog</a>
+      <a href="{{route('admin.create.blog')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add Blog</a>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -70,8 +70,8 @@
                         @endif
                     </td>
                     <td>
-                        <a href="{{route('account.edit.blog',$blog->id)}}" class="btn btn-primary btn-sm float-left mr-1" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" title="edit" data-placement="bottom"><i class="fas fa-edit"></i></a>
-                    <form method="POST" action="{{route('account.delete.blog',[$blog->id])}}">
+                        <a href="{{route('admin.edit.blog',$blog->id)}}" class="btn btn-primary btn-sm float-left mr-1" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" title="edit" data-placement="bottom"><i class="fas fa-edit"></i></a>
+                    <form method="POST" action="{{route('admin.delete.blog',[$blog->id])}}">
                       @csrf 
                       @method('delete')
                           <button class="btn btn-danger btn-sm dltBtn" data-id="{{$blog->id}}" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="fas fa-trash-alt"></i></button>
